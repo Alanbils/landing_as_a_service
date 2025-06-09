@@ -63,3 +63,9 @@ terragrunt output -raw distribution_domain_name
 
 Navigate to that domain or open the object from the output S3 bucket to view the resulting landing page.
 
+
+## Using the sample web UI
+
+1. Copy `web/config.example.js` to `web/config.js`.
+2. After deployment, run `terragrunt output` in your environment directory and fill the values into `web/config.js`.
+3. Open `web/index.html` in your browser to access the interface.
