@@ -17,11 +17,11 @@ resource "aws_lambda_function" "this" {
 
   environment {
     variables = {
-      INPUT_BUCKET       = var.input_bucket_name
-      INPUT_KEY          = var.input_key
-      OUTPUT_BUCKET      = var.output_bucket_name
-      BEDROCK_MODEL_ID   = var.bedrock_model_id
-      CLOUDFRONT_DOMAIN  = var.cloudfront_domain
+      INPUT_BUCKET      = var.input_bucket_name
+      INPUT_KEY         = var.input_key
+      OUTPUT_BUCKET     = var.output_bucket_name
+      BEDROCK_MODEL_ID  = var.bedrock_model_id
+      CLOUDFRONT_DOMAIN = var.cloudfront_domain
     }
   }
 }
