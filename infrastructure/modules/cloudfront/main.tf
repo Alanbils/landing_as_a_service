@@ -28,9 +28,15 @@ resource "aws_cloudfront_distribution" "this" {
     }
   }
 
-  restrictions { geo_restriction { restriction_type = "none" } }
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
 
-  viewer_certificate { cloudfront_default_certificate = true }
+  viewer_certificate {
+    cloudfront_default_certificate = true
+  }
 }
 
 data "aws_caller_identity" "current" {}
