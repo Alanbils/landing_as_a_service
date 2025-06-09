@@ -1,1 +1,6 @@
 web/config.js
+
+# Ignore infrastructure build artifacts
+infrastructure/modules/lambda/lambda.zip
+.terraform/
+.terragrunt-cache/
