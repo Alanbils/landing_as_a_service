@@ -63,6 +63,7 @@ terragrunt output -raw distribution_domain_name
 
 Navigate to that domain or open the object from the output S3 bucket to view the resulting landing page.
 
+
 ## Approximate monthly costs
 
 The following table gives a rough cost estimate for one environment (dev or prod) assuming around **10,000 page generation requests per month**. Each request runs the Lambda for about 5 seconds with 128 MB of memory and invokes the Bedrock "anthropic.claude-v2" model with roughly 1k input tokens and 1k output tokens. Storage needs and data transfer are kept small (≈5 GB across the S3 buckets and ≈10 GB of CloudFront traffic).
@@ -77,4 +78,11 @@ The following table gives a rough cost estimate for one environment (dev or prod
 | Bedrock (claude‑v2)    | 10k invocations with ~1k input and ~1k output tokens      |     ~\$80 input + \$240 output |
 
 **Approximate total:** about **\$321 per month** under these assumptions. Costs will vary with actual usage, token counts, and AWS region.
+
+
+## Using the sample web UI
+
+1. Copy `web/config.example.js` to `web/config.js`.
+2. After deployment, run `terragrunt output` in your environment directory and fill the values into `web/config.js`.
+3. Open `web/index.html` in your browser to access the interface.
 
