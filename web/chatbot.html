@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Landing Chatbot</title>
+    <style>
+        #chat { border: 1px solid #ccc; height: 300px; overflow-y: auto; padding: 10px; }
+        #chat p { margin: 0; padding: 4px; }
+        .user { color: blue; }
+        .bot { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Landing Page Chatbot</h1>
+    <div id="auth">
+        <input id="username" placeholder="Username" /> <br />
+        <input id="password" type="password" placeholder="Password" /> <br />
+        <button id="login">Login</button>
+    </div>
+
+    <div id="chatContainer" style="display:none;">
+        <div id="chat"></div>
+        <input id="message" placeholder="Describe your landing page" size="60" />
+        <button id="send">Send</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amazon-cognito-identity-js/5.2.8/amazon-cognito-identity.min.js"></script>
+    <script src="config.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

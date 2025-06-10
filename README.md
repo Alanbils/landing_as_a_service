@@ -84,5 +84,6 @@ The following table gives a rough cost estimate for one environment (dev or prod
 
 1. Copy `web/config.example.js` to `web/config.js`.
 2. After deployment, run `terragrunt output` in your environment directory and fill the values into `web/config.js`.
-3. Open `web/index.html` in your browser to access the interface.
+3. Open `web/index.html` for the basic form interface or `web/chatbot.html` for 
+   the friendlier chat-based version.
 
